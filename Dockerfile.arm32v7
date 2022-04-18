@@ -14,7 +14,7 @@ RUN cc 'mango-arm32v7.o' -o '/usr/local/bin/mango' -rdynamic -lxml2 -L/image_siz
 FROM  arm32v7/ubuntu:18.04
 WORKDIR /
 RUN apt update \
-    && apt install libxml2 libarchive13 libssl1.1 libsqlite3-0 libyaml-0-2 libgc-dev libevent-2.1-7 -y \
+    && apt install libxml2 libarchive13 libssl1.1 libsqlite3-0 libyaml-0-2 libgc1c2 libevent-2.1-6 -y \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
